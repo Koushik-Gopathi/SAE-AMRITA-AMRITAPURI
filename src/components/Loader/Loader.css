@@ -1,0 +1,60 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--bg);
+  pointer-events: none;
+}
+
+.loader__stage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* ---------- car ---------- */
+.top-car {
+  filter: drop-shadow(0 0 10px rgba(225, 6, 0, 0.45));
+}
+
+.top-car__tail {
+  filter: drop-shadow(0 0 4px #ff2a1f);
+}
+
+/* ---------- tyre smoke ---------- */
+.loader__puff {
+  fill: rgba(200, 200, 212, 0.22);
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: puff 0.9s ease-out forwards;
+}
+
+@keyframes puff {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(4.5);
+    opacity: 0;
+  }
+}
+
+/* ---------- SAE badge inside the donut ---------- */
+.loader__badge-sae {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 92px;
+  letter-spacing: 6px;
+  fill: var(--fg);
+  filter: drop-shadow(0 0 18px var(--red-glow));
+}
+
+.loader__badge-sub {
+  font-family: var(--font-body);
+  font-size: 16px;
+  letter-spacing: 12px;
+  fill: var(--red);
+}
